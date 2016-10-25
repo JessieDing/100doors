@@ -1,6 +1,6 @@
 package com.jessie;
 
-public class OneHundredDoors {
+public class OneHundredDoors_old {
 
 //    private static boolean trigger(Boolean door) {
 //        Boolean doorStatus;
