@@ -3,14 +3,12 @@ package com.jessie;
 public class Application {
     public static void main(String[] args) {
         DoorTrigger doorTrigger = new DoorTrigger();
-        PrintProcessor processor = new PrintProcessor();
         Printer printer = new Printer();
 
-        boolean[] doors = doorTrigger.trigger();
-        String[] doorStatus = processor.parseToString(doors);
+        Door[] doors = doorTrigger.trigger();
 
-        for (int counter = 0; counter < 100; counter++){
-            printer.print("Door" + (counter + 1) + " is" + " " + doorStatus[counter]);
+        for (int count = 0; count < 100; count++){   // 用Door类的 getNumber，foreach遍历。更好
+            printer.print("Door" + (count + 1) + " is" + " " + doors[count].getStatus());
         }
     }
 }

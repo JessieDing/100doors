@@ -1,17 +1,20 @@
 package com.jessie;
 
 public class DoorTrigger {
-    private boolean[] doors = new boolean[100];
+    private Door[] doors = new Door[100]; //数组
 
 //    public boolean[] getDoors() {
 //        return doors;   //外面ger到的doors是下面trigger中return的doors吗？
 //    }
 
-    public boolean[] trigger() {
+    public Door[] trigger() {
         for (int i = 1; i <= doors.length; i++) {
             for (int j = 0; j < doors.length; j++) {
                 if ((j + 1) % i == 0) {
-                    doors[j] = !doors[j];
+                    if (doors[j] == null) {     // 需将第j个Door对象new出来，否则为空
+                        doors[j] = new Door();
+                    }
+                    doors[j].setStatus(!doors[j].isStatus());
                 }
             }
         }
