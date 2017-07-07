@@ -1,14 +1,14 @@
 package com.jessie;
 
-public class Door {
+class Door {
     private int number;
     private boolean status;
 
-    public boolean isStatus() {
+    boolean isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    void setStatus(boolean status) {
         this.status = status;
     }
 
@@ -20,7 +20,7 @@ public class Door {
         this.number = number;
     }
 
-    public String getStatus(){
+    String getStatus(){
         if (status){
             return "open";
         }

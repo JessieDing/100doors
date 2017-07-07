@@ -1,8 +1,8 @@
 package com.jessie;
 
-public class Printer {
+class Printer {
 
-    public void print(String message) {
+    void print(String message) {
         System.out.println(message);
     }
 }
